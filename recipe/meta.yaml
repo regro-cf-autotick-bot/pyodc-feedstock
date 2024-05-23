@@ -1,5 +1,5 @@
 {% set name = "pyodc" %}
-{% set version = "1.3.0" %}
+{% set version = "1.4.1" %}
 
 
 package:
@@ -8,7 +8,7 @@ package:
 
 source:
   url: https://github.com/ecmwf/{{ name }}/archive/refs/tags/{{ version }}.tar.gz
-  sha256: a039c6223d5d756f57b9760b06d50ca795fc74f0ed6cdac1def43e7292bfd569
+  sha256: 76c7f7e646062dda918277584578b04554e19ff6dcdd79c8a8517cc7513cd66b
 
 build:
   number: 0
