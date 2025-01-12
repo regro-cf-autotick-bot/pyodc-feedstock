@@ -11,16 +11,16 @@ source:
   sha256: a039c6223d5d756f57b9760b06d50ca795fc74f0ed6cdac1def43e7292bfd569
 
 build:
-  number: 0
+  number: 1
   noarch: python
   script: {{ PYTHON }} -m pip install . -vv
 
 requirements:
   host:
-    - python >=3.6
+    - python {{ python_min }}
     - pip
   run:
-    - python >=3.6
+    - python >={{ python_min }}
     - cffi
     - pandas
 
@@ -31,6 +31,7 @@ test:
     - pip
     - pytest
     - odc  # [not win]
+    - python {{ python_min }}
   source_files:
     - CHANGELOG.md
     - codc
